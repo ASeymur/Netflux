@@ -1,0 +1,28 @@
+// @import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// @import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/dark-mode";
+
+@import "components/slider";
+@import "components/button";
+@import "components/free-movies";
+@import "components/cover";
+@import "components/featured-movies";
+@import "components/top-categories";
+@import "components/all-categories";
+@import "components/pricing";
+@import "components/FAQ";
+@import "components/news-event";
+@import "components/get-started";
+@import "components/not-found";
+@import "components/detail-movie";
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/login-register";
+

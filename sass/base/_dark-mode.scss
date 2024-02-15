@@ -1,0 +1,446 @@
+.dark-mode {
+    
+    // .body-bg {
+    //     background-image: url(/img/main-cover.svg), url(/img/bg-1-dark.svg), url(/img/bg-2-dark.svg), url(/img/bg-footer-dark.svg);
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //     background-position: 0 0, 0 115rem, 0 337rem, 0 525rem;
+    //     z-index: 100;
+    // }
+
+    //     .slider {
+    //         background-color: $color-primary-dark;
+
+    //         p {
+    //             color: $color-white;
+    //         }
+
+    //         h2 {
+    //             color: $color-white;
+    //         }
+
+    //         span {
+    //             color: $color-white;
+    //         }
+
+    //         a {
+    //             color: $color-primary-light;
+    //         }
+    //     }
+
+    //     .featured-movies {
+    //         &__info {
+    //             p {
+    //                 color: $color-white;
+    //             }
+    //         }
+
+    //         &__caption {
+    //             color: $color-white;
+    //         }
+
+    //         &__card {
+    //             background-color: $color-bg-dark-2;
+    //         }
+
+    //     }
+
+    //     .heading-primary {
+    //         &__dark {
+    //             color: $color-white;
+    //         }
+
+    //         &__blue {
+    //             color: $color-primary-light;
+    //         }
+    //     }
+
+    //     .heading-secondary {
+    //         &__pro {
+
+    //             &--main {
+    //                 color: $color-primary-2;
+    //             }
+
+    //             &--sub {
+    //                 color: $color-white;
+    //             }
+    //         }
+
+    //         &__basic {
+    //             &--main {
+    //                 color: $color-primary-light;
+    //             }
+
+    //             &--sub {
+    //                 color: $color-white;
+    //             }
+    //         }
+    //     }
+
+    .slider__arrows {
+        &--left {
+            display: none;
+        }
+
+        &--dark1 {
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            transform: translateX(-50%);
+            z-index: -1;
+            left: 0;
+
+            @include respond(tab-port) {
+                max-width: 7rem;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &--right {
+            display: none;
+        }
+
+        &--dark2 {
+            display: inline-block;
+            position: absolute;
+            top: 45%;
+            transform: translateX(50%);
+            z-index: -1;
+            right: 0;
+
+            @include respond(tab-port) {
+                max-width: 7rem;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+    }
+
+    .all-categories {
+        // &__arrows {
+        //     a {
+        //         background-color: $color-bg-dark-2;
+        //     }
+        // }
+
+        // &__arrow {
+        //     fill: $color-white;
+        //     fill-opacity: .87;
+        // }
+
+        &__icon {
+            display: none;
+
+            &-dark {
+                display: inline-block;
+                border: 2px solid $color-icon-border;
+                width: 10rem;
+                height: 10rem;
+                padding: 1.5rem 1.5rem;
+                border-radius: 1.2rem;
+                background-color: var(--color-paper-light);
+            }
+        }
+    }
+
+    //     .pricing {
+    //         &__basic {
+
+    //             &-card {
+    //                 background-color: $color-bg-dark-2;
+    //                 box-shadow: none;
+    //             }
+    //         }
+
+    //         &__card {
+    //             background-color: $color-bg-dark-2;
+    //             box-shadow: none;
+    //         }
+
+    //         &__plan {
+
+    //             &-content {
+
+    //                 a {
+    //                     color: $color-white;
+    //                 }
+
+    //                 &:not(:last-child) {
+    //                     border-bottom: 2px dashed $color-dashed-dark;
+    //                 }
+    //             }
+
+    //         }
+
+    //         &__note {
+    //             span {
+    //                 color: $color-pricing-dark;
+    //             }
+    //         }
+    //     }
+
+    //     .FAQ {
+    //         p {
+    //             color: $color-white;
+    //         }
+
+    //         &__list {
+    //             background: $color-bg-dark-2;
+
+    //             &:hover {
+    //                 background: $color-primary;
+    //             }
+
+    //             &--sub {
+    //                 background: $color-bg-dark-2;
+    //             }
+    //         }
+
+    //         &__arrow {
+    //             fill: $color-primary-2;
+    //         }
+
+    //         a {
+    //             color: $color-white;
+    //         }
+    //     }
+
+    //     .news-event {
+
+    //         h3 {
+    //             color: $color-pricing-dark;
+    //         }
+
+    //         p {
+    //             color: $color-white;
+    //         }
+
+    //         a {
+    //             color: $color-primary-light;
+    //         }
+
+    //     }
+
+    //     .get-started {
+    //         h2 {
+    //             color: $color-white;
+    //         }
+    //     }
+
+    //     .footer {
+    //         h3 {
+    //             color: $color-white;
+    //         }
+
+    //         a {
+    //             color: $color-white;
+    //         }
+
+    //         &__icon {
+    //             fill: $color-white;
+    //         }
+    //     }
+
+    //     &__second {
+    //         background-color: $color-bg-dark;
+
+    //         .header-second {
+    //             .header__login {
+    //                 color: $color-white;
+    //                 border-right: 1px solid $color-pricing-dark;
+    //             }
+
+    //             ul {
+
+    //                 a {
+    //                     color: $color-white;
+    //                 }
+    //             }
+
+    //             .header__icon {
+    //                 fill: $color-pricing-dark;
+    //             }
+    //         }
+
+    //         .footer-second {
+    //             .footer__copyright {
+    //                 span {
+    //                     color: $color-white;
+    //                 }
+    //             }
+    //         }
+
+    //         .footer {
+    //             h3 {
+    //                 color: $color-white;
+    //             }
+
+    //             a {
+    //                 color: $color-white;
+    //             }
+
+    //             &__icon {
+    //                 fill: $color-white;
+    //             }
+    //         }
+
+    //         .not-found {
+
+    //             h3,
+    //             p {
+    //                 color: $color-white;
+    //             }
+    //         }
+
+    //         .detail-movie {
+    //             background: $color-bg-dark-2;
+
+    //             &__text {
+    //                 h3 {
+    //                     color: $color-white;
+    //                 }
+
+    //                 p {
+    //                     color: $color-white;
+    //                 }
+    //             }
+
+    //             &__links {
+    //                 a {
+    //                     span {
+    //                         color: $color-primary-light;
+    //                     }
+    //                 }
+    //             }
+
+    //             &__icon {
+    //                 fill: $color-primary-light;
+    //             }
+
+    //             &__bg {
+
+    //                 &:before {
+    //                     content: '';
+    //                     position: absolute;
+    //                     top: 0;
+    //                     left: 0;
+    //                     width: 100%;
+    //                     height: 40%;
+    //                     background: $color-secondary-dark;
+    //                     border-radius: 0 0 50% 50%/0 0 120% 120%;
+    //                     transform: scale(1.6);
+    //                     z-index: -1;
+    //                 }
+    //             }
+
+    //             &__profession {
+    //                 color: $color-white;
+    //             }
+
+    //             &__name {
+    //                 color: $color-white;
+    //             }
+    //         }
+
+
+    //         .slider {
+    //             p {
+    //                 color: $color-white;
+    //             }
+
+    //             h2 {
+    //                 color: $color-white;
+    //             }
+
+    //             span {
+    //                 color: $color-white;
+    //             }
+
+    //             a {
+    //                 color: $color-primary-light;
+    //             }
+    //         }
+
+    //         .login-register { 
+
+
+    //             &__intro {
+    //                 &--title {
+    //                     @include font-big-bolt;
+    //                     color: $color-white;
+    //                 }
+
+    //                 &--sub-title {
+    //                     @include font-default-light;
+    //                     color: $color-primary-light;
+    //                 }
+
+    //             }
+
+    //             &__icon {
+    //                 &--arrow {
+    //                     fill: $color-primary-light;
+    //                 }
+    //             }
+
+    //             &__functionality {
+    //                 background: $color-bg-dark-2;
+    //             }
+
+    //             &__or {
+    //                 &::before, &::after {
+    //                     background-color: $color-white;
+    //                 }
+
+    //                 span {
+    //                     color: $color-pricing-dark;
+    //                 }
+    //             }
+
+    //             &__input {
+    //                 color: $color-white;
+    //                 background-color: $color-bg-dark-2;
+    //                 border: 1px solid rgba(255, 255, 255, 0.25);
+
+    //                 &::-webkit-input-placeholder {
+    //                     color: $color-pricing-dark;
+    //                 }
+    //             }
+
+    //             &__label {
+    //                 color: $color-primary-light;
+    //             }
+
+    //             &__checkbox {
+    //                 a {
+    //                     color: $color-primary-light;
+    //                 }
+    //             }
+
+    //             &__remember {
+    //                 span {
+    //                     color: $color-white;
+    //                 }
+    //             }
+
+    //             &__privacy {
+    //                 span {
+    //                     color: $color-white;
+    //                 }
+    //             }
+    //         }
+    //     }
+}
+
+// // .dark-mode__second {
+
+// // } 
+
+// // sonda widthlere baxmaq, seyfenin backgroundu, all categories ikonlarin olcusu,  

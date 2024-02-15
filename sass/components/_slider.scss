@@ -1,0 +1,234 @@
+.slider {
+    max-width: 101rem;
+    margin: 0 auto;
+    position: relative;
+
+    @include respond(tab-land) {
+        max-width: 90rem;
+    }
+
+    @include respond(tab-port) {
+        max-width: 67rem;
+    }
+
+    @include respond(phone) {
+        @include flex-column-center;
+        max-width: 50rem;
+        // padding-left: 2rem;
+        // padding-right: 2rem;
+    }
+
+    &__bg {
+        background-color: var(--color-secondary-light);
+        border-radius: 2.5rem;
+        box-shadow: 0 2rem 4rem rgba(var(--color-text-primary), .3);
+    }
+
+    &__content {
+        margin-top: 9.3rem;
+        margin-left: 4rem;
+        margin-right: 8rem;
+
+        @include respond(tab-port) {
+            margin-top: 4rem;
+            margin-left: 2rem;
+            margin-right: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @include respond(phone) {
+            @include flex-column-center;
+            // margin-left: 0;
+            // margin-right: 0;
+        }
+    }
+
+    &__title {
+        p {
+            font-weight: 500;
+            font-size: 2.2rem;
+            line-height: 2.7rem;
+            color: var(--color-text-primary);
+            margin-bottom: $gap-small;
+
+            @include respond(tab-port) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 3.6rem;
+            line-height: 4.4rem;
+            color: var(--color-text-primary);
+
+            @include respond(tab-port) {
+                font-size: 3rem;
+            }
+
+            @include respond(phone) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__raiting {
+        margin-top: 2.4rem;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 2.5rem;
+
+        @include respond(tab-port) {
+            margin-top: $gap-small;
+        }
+    }
+
+    &__icon {
+        max-width: 2.3rem;
+        height: 2.2rem;
+        fill: $color-icon-star;
+        
+        &--play {
+            position: absolute;
+            fill: $color-white;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // transform: translateY(3rem);
+            margin-top: 3rem;
+
+            
+            max-width: 7rem;
+            height: 7rem;
+            background-color: $color-grey;
+            border-radius: 50%;
+        }
+    }
+
+    &__info {
+        gap: 1.8rem;
+        align-items: center;
+
+        span {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            color: var(--color-text-primary);
+        }
+    }
+
+    &__text {
+        p {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: var(--color-text-primary);
+            margin-bottom: 5.4rem;
+
+            @include respond(tab-port) {
+                margin-bottom: 2rem;
+            }
+
+            @include respond(phone) {
+                text-align: center;
+            }
+        }
+
+    }
+
+    &__img {
+        position: relative;
+        padding-top: 2.5rem;
+        padding-bottom: 2.4rem;
+
+        @include respond(tab-land) {
+            margin-right: 6rem;
+        }
+
+        @include respond(tab-port) {
+            margin-right: 0rem;
+            margin-top: 1rem;
+        }
+
+
+        img {
+            max-height: 44.4rem;
+
+            @include respond(tab-port) {
+                max-height: 27rem;
+            }
+
+            @include respond(phone) {
+                max-height: 50rem;
+            }
+        }
+    }
+
+    &__watch {
+        gap: 5rem;
+
+        @include respond(phone) {
+            @include flex-column-center;
+            gap: 1rem;
+            margin-bottom: -3rem;
+        }
+
+        a {
+            color: var(--color-secondary);
+            @include font-default;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 1.5rem;
+
+            &:hover {
+                background-color: $color-primary;
+                color: $color-white;
+                border-radius: 10rem;
+            }
+        }
+
+    }
+
+    &__arrows {
+        &--left {
+            position: absolute;
+            top: 45%;
+            transform: translateX(-50%);
+            z-index: -1;
+            left: 0;
+
+            @include respond(tab-port) {
+                max-width: 7rem;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &--right {
+            position: absolute;
+            top: 45%;
+            transform: translateX(50%);
+            z-index: -1;
+            right: 0;
+
+            @include respond(tab-port) {
+                max-width: 7rem;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &--dark1 {
+            display: none;
+        }
+
+        &--dark2 {
+            display: none;
+        }
+    }
+}

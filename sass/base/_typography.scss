@@ -1,0 +1,54 @@
+.heading-primary {
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 5.1rem;
+    @include flex-column;
+
+    
+    @include respond(tab-port) {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+     }
+
+
+    &__dark {
+        color: var(--color-secondary-dark);
+    }
+
+    &__blue {
+        color: var(--color-secondary);
+    }
+}
+
+.heading-position {
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+
+.heading-secondary {
+
+    &__pro {
+        &--main {
+            @include heading-secondary-main;
+            color: var(--color-primary);
+        }
+
+        &--sub {
+            @include heading-secondary-sub;
+            color: var(--color-text-primary);
+        }
+    }
+
+    &__basic {
+        &--main {
+            @include heading-secondary-main;
+            color: var(--color-secondary);
+        }
+
+        &--sub {
+            @include heading-secondary-sub;
+            color: var(--color-text-primary);
+        }
+    }
+}

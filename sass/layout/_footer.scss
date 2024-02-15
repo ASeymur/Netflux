@@ -1,0 +1,115 @@
+.footer {
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8rem;
+
+    @include respond(tab-port) {
+        flex-wrap: wrap;
+    }
+
+    // @include respond(phone) {
+    //     // flex-direction: column;
+    //     // flex-wrap: wrap;
+    // }
+    
+
+    &__copyright {
+        @include flex-column;
+        gap: $gap-small;
+        
+        @include respond(phone) {
+            order: 1;
+        }
+    }
+
+    &__logo {
+        @include flex-column;
+        align-items: center;
+
+        &--text {
+            @include font-footer;
+            color: $color-white;
+        }
+    }
+
+    &__text {
+        span {
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            color: $color-white;
+        }
+    }
+
+    &__content {
+        gap: 7rem;
+
+        @include respond(phone) {
+            flex-wrap: wrap;
+            justify-content: center;
+            // align-items: center;
+        }
+    }
+
+    &__links {
+        @include flex-column;
+        gap: $gap-small;
+
+        @include respond(phone) {
+            align-items: center;
+        }
+        
+        h3 {
+            @include font-footer;
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+        }
+
+        a {
+            @include font-default-inputs;
+            color: var(--color-text-primary);
+        }
+
+        ul {
+            @include flex-column;
+            gap: $gap-small;
+
+            @include respond(phone) {
+                align-items: center;
+            }
+        }
+
+    }
+
+    &__social-media {
+        gap: $gap-small;
+
+        @include respond(tab-land) {
+            flex-direction: column;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: row;
+        }
+
+        @include respond(phone) {
+            order: 1;
+        }
+    }
+
+    &__icon {
+        fill: var(--color-fill-icon);
+    }
+}
+
+
+.footer-second {
+    .footer__copyright {
+        span {
+            color: var(--color-text-primary);
+        }
+    }
+}
+
+

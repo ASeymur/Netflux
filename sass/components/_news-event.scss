@@ -1,0 +1,42 @@
+.news-event {
+    margin-top: 12rem;
+    gap: 8.3rem;
+    justify-content: center;
+
+    @include respond(phone) {
+        @include flex-column-center;  
+   }
+
+    &__content {
+        align-items: center;
+        gap: $gap-small;
+    }
+
+    &__img {
+        max-width: 12rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        h3 {
+            @include font-default;
+            text-transform: uppercase;
+            color: var(--color-text-secondary);
+            margin-bottom: .7rem;
+        }
+    }
+
+    &__info {
+        p {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: var(--color-text-primary);
+            margin-bottom: $gap-small;
+        }
+    }
+    
+}

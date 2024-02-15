@@ -1,0 +1,132 @@
+.cover {
+    margin-top: 14.3rem;
+    margin-bottom: 13rem;
+
+    @include respond(tab-land) {
+        margin-top: 10rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    @include respond(phone) {
+        margin-top: 0;
+        // margin-bottom: 1rem;
+        // margin-bottom: 30rem;
+    }
+
+    &__bg {
+        position: relative;
+        overflow: hidden;
+        height: auto;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-image: url(/img/main-cover.svg);
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+
+    &__trailer {
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        span {
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+            color: $color-white;
+            text-transform: uppercase;
+
+            @include respond(phone) {
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 1rem;
+            }
+
+        }
+    }
+
+    &__icon {
+        max-width: 10rem;
+        max-height: 10rem;
+        fill: $color-white;
+
+        @include respond(tab-port) {
+            max-width: 5.5rem;
+            max-height: 5.5rem;
+        }
+
+        // @include respond(phone) {
+        //     max-width: 3rem;
+        //     max-height: 3rem;
+        // }
+    }
+
+    &__info {
+        margin-top: 5.4rem;
+
+        @include respond(tab-land) {
+            margin-top: 3rem;
+        }
+
+        @include respond(phone) {
+            margin-top: 1rem;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            color: $color-white;
+            margin-bottom: .8rem;
+
+            @include respond(tab-port) {
+                margin-bottom: 1rem;
+            }
+
+            @include respond(phone) {
+                font-size: 1.6rem;
+                line-height: 1rem;
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 4.8rem;
+            line-height: 5.9rem;
+            color: $color-white;
+            margin-bottom: $gap-small;
+
+            @include respond(tab-port) {
+                font-size: 3.5rem;
+                line-height: 4.5rem;
+                margin-bottom: .5rem;
+            }
+
+            @include respond(phone) {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+            color: $color-white;
+
+            @include respond(phone) {
+                font-size: 1.5rem;
+                line-height: 1rem;
+            }
+        }
+    }
+}

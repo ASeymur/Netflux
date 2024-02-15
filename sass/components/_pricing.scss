@@ -1,0 +1,167 @@
+.pricing {
+
+    &__content {
+        align-items: center;
+        
+        @include respond(tab-port) {
+            gap: 7rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__basic {
+        &-card {
+            width: 26%;
+            @include flex-column;
+            @include pricing-card;
+            padding-bottom: 3rem;
+            transition: transform .3s;
+            border: 2px solid var(--color-paper-light);
+            position: relative;
+
+            @include respond(tab-port) {
+               width: 40%;
+            }
+
+            @include respond(phone) {
+               width: 90%;
+            }
+
+            &:hover,
+            &:active {
+                border: 2px solid $color-blue;
+                transform: scale(1.1) translateY(-.7rem);
+                z-index: 3;
+                box-shadow: 0px 3px 49px 9px rgba(50, 5, 228, 0.16);
+                overflow: hidden;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 25%;
+                    background-image: linear-gradient(312.8deg, #E91E63 19.11%, #9805bc 56.88%);
+                    border-radius: 0 0 50% 50%/0 0 100% 100%;
+                    transform: scale(1.6);
+                    z-index: -1;
+                }
+
+                .heading-secondary__basic {
+                    &--main,
+                    &--sub {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__card {
+        @include flex-column;
+        @include pricing-card;
+        margin-right: -2rem;
+        width: 26%;
+        transition: transform .3s;
+        border: 2px solid var(--color-paper-light);
+        box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+        position: relative;
+
+        @include respond(tab-port) {
+            width: 40%;
+            margin-right: 0;
+         }
+
+         @include respond(phone) {
+            width: 90%;
+         }
+   
+        
+        &:hover,
+        &:active {
+            border: 2px solid $color-primary;    
+            transform: scale(1.1) translateY(-.7rem);
+            z-index: 2;
+            box-shadow: 0px 3px 49px 9px rgba(228, 5, 109, 0.16);
+            overflow: hidden;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 22%;
+                background-image: linear-gradient(312.8deg, #E91E63 19.11%, #9805bc 56.88%);
+                border-radius: 0 0 50% 50%/0 0 100% 100%;
+                transform: scale(1.6);
+                z-index: -1;
+            }
+
+            .heading-secondary__pro {
+                &--main, &--sub {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    &__position {
+        &--1 {
+            z-index: 2;
+        }
+
+        &--2 {
+            z-index: 1;
+        }
+    }
+
+    &__heading {
+        width: 100%;
+        margin-bottom: 5rem;
+        @include flex-column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__plan {
+        @include flex-column;
+        gap: 2.1rem;
+        align-items: center;
+        margin-bottom: 2rem;
+
+
+        &-content {
+
+            a {
+                font-weight: 500;
+                font-size: $default-font-size;
+                line-height: 1px;
+                color: var(--color-text-primary);
+            }
+
+            &:not(:last-child) {
+                border-bottom: 2px dashed var(--color-dashed-border);
+                padding-bottom: 1rem;
+                width: 100%;
+            }
+        }
+
+    }
+
+    &__note {
+        margin-bottom: 2rem;
+
+        span {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            text-align: center;
+            color: var(--color-text-secondary);
+        }
+    }
+}
+
+

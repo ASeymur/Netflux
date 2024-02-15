@@ -1,0 +1,174 @@
+@mixin btn-border {
+    border: 1px solid $color-white;
+    color: $color-white;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin align-center {
+    padding-left: 0;
+    margin-top: 0;
+    align-items: center;
+}
+
+@mixin line-before-after {
+    content: '';
+    position: absolute;
+    height: .5px;
+    width: 12%;
+    background-color: var(--color-text-secondary);
+    top: 50%;
+}
+
+@mixin position-top-categories {
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+}
+
+@mixin pricing-card {
+    align-items: center;
+    background-color: var(--color-paper-light);
+    border-radius: 4rem;
+    text-align: center;
+    box-shadow: 0px 3px 49px 9px rgba(0, 0, 0, 0.06);
+    padding: 3rem 2.7rem 1.6rem 2.7rem;
+}
+
+@mixin heading-secondary-main {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+}
+
+@mixin heading-secondary-sub {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    text-transform: uppercase;
+}
+
+@mixin FAQ-font {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: var(--color-text-primary);
+}
+
+@mixin font-small {
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 2.2rem;
+}
+
+@mixin font-big {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+}
+
+@mixin font-big-bolt {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 5rem;
+}
+
+@mixin font-medium {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 5.4rem;
+}
+
+@mixin font-medium-small {
+    font-weight: 500;
+    font-size: $default-font-size;
+    line-height: 1.9rem;
+}
+
+
+@mixin font-default {
+    font-weight: 700;
+    font-size: $default-font-size;
+    line-height: 2rem;
+}
+
+@mixin font-footer {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+@mixin font-default-light {
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 2.2rem;
+}
+
+@mixin font-default-inputs {
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 2rem;
+}
+
+
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+
+// @mixin respond($breakpoint) {
+//     @if $breakpoint == phone {
+//         @media only screen and (max-width: 37.5em) { @content };    //600px
+//     }
+//     @if $breakpoint == tab-port {
+//         @media only screen and (max-width: 56.25em) { @content };     //900px
+//     }
+//     @if $breakpoint == tab-land {
+//         @media only screen and (max-width: 75em) { @content };    //1200px
+//     }
+//     @if $breakpoint == big-desktop {
+//         @media only screen and (min-width: 112.5em) { @content };    //1800
+//     }
+// }
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+}

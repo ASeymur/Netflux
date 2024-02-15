@@ -1,0 +1,123 @@
+.featured-movies {
+    margin-top: 18.3rem;
+    width: 100%;
+    gap: 4.5rem;
+
+    @include respond(tab-land) {
+       margin-top: 10rem;
+       gap: 3rem;
+    }
+
+    @include respond(tab-port) {
+        align-items: center;
+     }
+
+    @include respond(phone) {
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center
+    }
+
+    &__text {
+        @include flex-column;
+        gap: 2.5rem;
+        width: 25%;
+        margin-top: 3rem;
+
+        @include respond(tab-land) {
+            gap: 1rem;
+         }
+
+        @include respond(tab-port) {
+            margin-top: 0;
+         }
+
+         
+        @include respond(phone) {
+            width: 45%;
+         }
+        
+    }
+
+    &__info {
+
+        p {
+            font-weight: 500;
+            font-size: 2.2rem;
+            line-height: 3.3rem;
+            color: var(--color-text-primary);
+
+            @include respond(tab-port) {
+                line-height: 2.5rem;
+             }
+        }
+    }
+
+    &__card {
+        width: 25%;
+        height: auto;
+        flex-direction: column;
+        background-color: var(--color-paper-light);
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 2.5rem;
+        position: relative;
+
+        @include respond(phone) {
+            width: 45%;
+         }
+
+        span {
+            padding: 6px 12px;
+            background-color: $color-black;
+            color: $color-white;
+            @include font-default-inputs;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 3rem;
+            position: absolute;
+            top: 1.7rem;
+            left: 2rem;
+
+            @include respond(tab-land) {
+                top: 1rem;
+                left: 1.3rem;
+                font-size: 1.3rem;
+                padding: 4px 10px;
+             }
+
+             @include respond(tab-port) {
+                top: .5rem;
+                left: 1rem;
+                font-size: 1.3rem;
+                padding: 3px 9px;
+             }
+        }
+    }
+
+    &__cover {
+        width: 100%;
+        border-radius: 2.5rem;
+    }
+
+    &__caption {
+        text-align: center;
+        @include font-footer;
+        color: var(--color-text-primary);
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
+
+        @include respond(tab-port) {
+            padding-left: .5rem;
+            padding-right: .5rem;
+         }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 7rem;
+        height: 7rem;
+    }
+}

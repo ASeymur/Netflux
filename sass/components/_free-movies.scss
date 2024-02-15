@@ -1,0 +1,150 @@
+.free-movies {
+    margin-top: 6rem;
+    gap: 1rem;
+
+    @include respond(tab-port) {
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+
+    &__small {
+        width: 25%;
+        height: 35rem;
+        justify-content: center;
+        align-items: flex-end;
+        border-radius: 2rem;
+        background-size: cover;
+
+        @include respond(tab-land) {
+            background-position: center;
+         } 
+
+        @include respond(tab-port) {
+            width: 49%;
+            height: 50rem;
+         }    
+
+        @include respond(phone) {
+            width: 100%;
+         }        
+
+        a {
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-white;
+            padding-bottom: 2rem;
+
+            @include respond(tab-port) {
+                font-size: 3.5rem;
+                line-height: 3.5rem;
+             }   
+        }
+    }
+
+    &__middle {
+        background-image: linear-gradient(to bottom,
+                rgba(2, 2, 162, 0.303) 19%, rgba(20, 4, 109, 0.83) 86.85%),
+            url(/img/people.svg);
+        width: 50%;
+        height: 35rem;
+        @include flex-column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        border-radius: 2rem;
+        background-size: cover;
+
+        // @include respond(tab-land) {
+        //     background-position: center;
+        //  } 
+
+        @include respond(tab-port) {
+            order: 1;
+            width: 100%;
+            height: 50rem;
+         }
+
+        &--content {
+            padding-bottom: 4rem;
+            padding-right: 3rem;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: 6rem;
+            line-height: 7rem;
+            text-transform: uppercase;
+            color: $color-white;
+            gap: 1.5rem;
+
+            @include respond(phone) {
+                font-weight: 700;
+                font-size: 3.4rem;
+                line-height: 2.9rem;
+             }
+
+            span {
+                font-weight: 700;
+                font-size: 5rem;
+                line-height: 7rem;
+                text-transform: uppercase;
+                color: $color-white;
+                align-self: flex-end;
+
+                @include respond(phone) {
+                    font-weight: 700;
+                    font-size: 2.4rem;
+                    line-height: 2.9rem;
+                 }
+            }
+
+            img {
+                transform: translateY(-1.5rem);
+                height: 5.7rem;
+            }
+        }
+    }
+
+    &__icon {
+        transform: translatey(1rem);
+
+        @include respond(phone) {
+            transform: none;
+         }
+    }
+    // &__right {
+    //     background-image: linear-gradient(to top,
+    //             rgba(233, 30, 99, 0.5) 19%, rgba(48, 79, 254, 0.5) 86.85%),
+    //         url(/img/girl.svg);
+    //     width: 25%;
+    //     // height: 35rem;
+    //     justify-content: center;
+    //     align-items: flex-end;
+    //     border-radius: 2rem;
+    //     background-size: cover;
+
+    //     a {
+    //         font-weight: 700;
+    //         font-size: 2.4rem;
+    //         line-height: 2.9rem;
+    //         text-align: center;
+    //         text-transform: uppercase;
+    //         color: $color-white;
+    //         padding-bottom: 2rem;
+    //     }
+    // }
+
+    &__bg--1 {
+        background-image: linear-gradient(to top,
+                rgba(233, 30, 99, 0.5) 19%, rgba(48, 79, 254, 0.5) 86.85%),
+            url(/img/popcorn.svg);
+    }
+
+    &__bg--2 {
+        background-image: linear-gradient(to top,
+                rgba(233, 30, 99, 0.5) 19%, rgba(48, 79, 254, 0.5) 86.85%),
+            url(/img/girl.svg);
+    }
+}

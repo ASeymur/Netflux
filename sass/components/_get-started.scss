@@ -1,0 +1,24 @@
+.get-started {
+    margin-top: 39.3rem;
+    margin-bottom: 7.2rem;
+    @include flex-column;
+    align-items: center;
+    gap: 4rem;
+
+    @include respond(tab-port) {
+        margin-top: 20rem;
+    }
+
+    &__title {
+        h2 {
+            font-weight: 700;
+            font-size: 3.6rem;
+            line-height: 4.4rem;
+            color: var(--color-text-primary);
+
+            @include respond(phone) {
+                text-align: center;
+            }
+        }
+    }
+}
